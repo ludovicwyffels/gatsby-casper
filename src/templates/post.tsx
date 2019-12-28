@@ -23,6 +23,7 @@ import { inner, outer, SiteHeader, SiteMain } from '../styles/shared';
 import config from '../website-config';
 
 import './post.scss'
+import ScrollProgressRead from '../components/header/progress-read'
 
 export const PostFull = css`
   position: relative;
@@ -213,6 +214,7 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
         {width && <meta property="og:image:width" content={width} />}
         {height && <meta property="og:image:height" content={height} />}
       </Helmet>
+      <ScrollProgressRead target="site-main" />
       <Wrapper className="PostTemplate">
         <header css={[outer, SiteHeader]}>
           <div css={inner}>
